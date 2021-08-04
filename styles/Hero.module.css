@@ -4,3 +4,7 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+.title {
+  text-shadow: 1px 1px 1px #323232;
+}

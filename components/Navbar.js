@@ -10,7 +10,7 @@ const Navbar = () => {
           <span className="text-blue-strong font-black ">END</span>
         </div>
       </Link>
-      <ul className="text-black">
+      <ul className="text-blue-strong flex gap-5 mr-20">
         <Link href="/about">
           <li>About</li>
         </Link>
