@@ -3,10 +3,11 @@ import styles from "../styles/Hero.module.css";
 import { motion } from "framer-motion";
 import HeroList from "./HeroList";
 import Link from "next/link";
+import AnimatedDots from "./AnimatedDots";
 
 const Hero = () => {
   return (
-    <header className={`${styles.background} h-screen`}>
+    <header className={`${styles.background} h-screen relative`}>
       <Navbar />
       <h1
         className={`text-7xl mb-10 text-center font-bold font-mont leading-relaxed text-blue-primary ${styles.title}`}
@@ -36,6 +37,7 @@ const Hero = () => {
           </motion.button>
         </Link>
       </div>
+      <AnimatedDots />
     </header>
   );
 };
