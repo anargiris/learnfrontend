@@ -1,12 +1,12 @@
 import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
-import { AnimatePresence } from "framer-motion";
+import { AnimateSharedLayout } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimateSharedLayout exitBeforeEnter>
       <Component {...pageProps} />
-    </AnimatePresence>
+    </AnimateSharedLayout>
   );
 }
 
