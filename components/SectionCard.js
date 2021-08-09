@@ -1,17 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SectionCard = ({ title, desc, color }) => {
   return (
-    <div className="shadow-lg w-56 rounded-sm overflow-hidden">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 1.1 }}
+      className="shadow-lg w-56 rounded-sm overflow-hidden bg-white"
+    >
       <div
-        className={`p-4 text-center font-bold text-gray-900 shadow-sm bg-${color} text-lg bg-opacity-80`}
+        className={`p-4 text-center font-bold text-gray-900 shadow-sm bg-${color} text-lg bg-opacity-90`}
       >
         {title}
       </div>
       <div className="px-2 py-4">
         <p className="text-md text-gray-700">{desc}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

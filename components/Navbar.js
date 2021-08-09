@@ -13,7 +13,7 @@ const Navbar = () => {
       </Link>
       <ul className="text-blue-strong flex gap-5 mr-20 font-mont">
         <Link href="/about">
-          <li>About</li>
+          <li className="cursor-pointer">About</li>
         </Link>
         <Dropdown />
       </ul>

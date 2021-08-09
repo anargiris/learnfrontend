@@ -22,12 +22,14 @@ const Hero = () => {
 
       <HeroList />
       <div className="font-mont flex items-center justify-center gap-5">
-        <motion.button
-          whileHover={{ y: -5, transition: "spring" }}
-          className="p-2 text-xl rounded-md bg-yellow-primary shadow-md"
-        >
-          Get started
-        </motion.button>
+        <Link href="/introduction">
+          <motion.button
+            whileHover={{ y: -5, transition: "spring" }}
+            className="p-2 text-xl rounded-md bg-yellow-primary shadow-md"
+          >
+            Get started
+          </motion.button>
+        </Link>
         <Link href="#whatsthis">
           <motion.button
             whileHover={{ y: -5, transition: "spring" }}

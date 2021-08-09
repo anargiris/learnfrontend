@@ -60,7 +60,7 @@ const introduction = () => {
           variants={list}
           animate="visible"
           initial="hidden"
-          className="flex justify-center items-center mt-5 gap-10 flex-wrap"
+          className="flex justify-center pb-4 items-center mt-5 gap-10 flex-wrap bg-gradient-to-b from-white via-blue-50 to-white"
         >
           <motion.div variants={item}>
             <SectionCard
