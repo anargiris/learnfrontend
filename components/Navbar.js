@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   return (
@@ -14,9 +15,7 @@ const Navbar = () => {
         <Link href="/about">
           <li>About</li>
         </Link>
-        <Link href="/sections">
-          <li>Sections</li>
-        </Link>
+        <Dropdown />
       </ul>
     </nav>
   );
