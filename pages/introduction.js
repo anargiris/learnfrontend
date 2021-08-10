@@ -2,35 +2,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import SectionCard from "../components/SectionCard";
+import IntroductionCards from "../components/IntroductionCards";
+import Link from "next/link";
+import EinsteinQuote from "../components/EinsteinQuote";
 
 const introduction = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.3,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  };
-
-  const item = {
-    visible: {
-      opacity: 1,
-      transition: {
-        type: "spring",
-      },
-    },
-    hidden: { opacity: 0 },
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -38,14 +14,14 @@ const introduction = () => {
       exit={{ opacity: 0 }}
     >
       <Navbar />
-      <div className="text-blue-strong font-open">
+      <main className="text-blue-strong font-open">
         <h1 className="text-5xl font-bold font-mont text-center uppercase leading-relaxed mb-5">
           <span className="text-blue-primary font-black ">Learn</span>
           <span className="text-yellow-primary font-black ">Front</span>
           <span className="text-blue-strong font-black ">End</span> -
           Introduction
         </h1>
-        <h2 className="text-center text-2xl mb-10">
+        <h2 className="text-center text-2xl mb-10 text-gray-700">
           You are about to get started with gaining the knowledge and mindset to
           become a frontend developer.
         </h2>
@@ -56,49 +32,48 @@ const introduction = () => {
         <div className="flex justify-center items-center mt-4">
           <Image src="/down.svg" width={50} height={50} />
         </div>
-        <motion.div
-          variants={list}
-          animate="visible"
-          initial="hidden"
-          className="flex justify-center pb-4 items-center mt-5 gap-10 flex-wrap bg-gradient-to-b from-white via-blue-50 to-white"
-        >
-          <motion.div variants={item}>
-            <SectionCard
-              title="HTML"
-              desc="The first thing you need to learn in your road to success. Define paragraphs, headings and images that your browser understands. Learn how Google reads websites."
-              color="yellow-500"
-            />
-          </motion.div>
-          <motion.div variants={item}>
-            <SectionCard
-              title="CSS"
-              desc="Our browser understands our content. Now it's time to change their colors, width and maybe even animate them. CSS helps you bring life to your websites."
-              color="blue-600"
-            />
-          </motion.div>
-          <motion.div variants={item}>
-            <SectionCard
-              title="JavaScript"
-              desc="With JavaScript we add interactivity, advanced functionality and logic to our applications. That's where things start to get exciting! Learn the basics and little more.."
-              color="yellow-400"
-            />
-          </motion.div>
-          <motion.div variants={item}>
-            <SectionCard
-              title="React"
-              desc="By coming this far, you have the basic knowledge and the willingness to continue. React is a 'Javascript library' that helps build your projects faster and efficiently."
-              color="indigo-500"
-            />
-          </motion.div>
-          <motion.div variants={item}>
-            <SectionCard
-              title="Tailwind"
-              desc="We are going to help ourselves with the design of our websites. After we have good understanding of CSS, Tailwind's gonna make everything smoother, while saving us time."
-              color="blue-300"
-            />
-          </motion.div>
-        </motion.div>
-      </div>
+
+        <IntroductionCards />
+        <section className="mt-10 w-full overflow-hidden">
+          <h3 className="text-center text-3xl font-bold font-mont mb-10">
+            Remember that learning front end{" "}
+            <span className="text-yellow-primary">TAKES TIME</span>.
+          </h3>
+          <div className="w-full flex justify-between">
+            <div className="p-2 flex justify-center items-center">
+              <div>
+                <p className="text-md px-10 text-blue-strong text-center font-open">
+                  The most useful advice is to take it slow and steady. Don't
+                  rush through things, it's better to spend some time to
+                  understand the concepts. Try new things and learn from your
+                  mistakes.
+                </p>
+                <div className="w-20 my-5 rounded-sm mx-auto h-1 bg-yellow-secondary"></div>
+                <EinsteinQuote />
+              </div>
+            </div>
+            <div className="rounded-full overflow-hidden transform skew-x-1">
+              <Image src="/coding.jpg" width={1200} height={900} />
+            </div>
+          </div>
+        </section>
+        <section className="mt-20 text-center border-t-4 py-10 border-blue-strong">
+          <h4 className="text-4xl mb-10 font-bold font-mont">
+            Start with HTML
+          </h4>
+          <p>Begin your journey with HTML!</p>
+          <Link href="/html">
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+              }}
+              className="bg-yellow-primary mx-auto text-2xl shadow-lg w-28 cursor-pointer p-2 rounded-lg text-white font-bold my-4"
+            >
+              Let's go!
+            </motion.div>
+          </Link>
+        </section>
+      </main>
     </motion.div>
   );
 };

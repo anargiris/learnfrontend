@@ -6,10 +6,10 @@ const SectionCard = ({ title, desc, color }) => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1.1 }}
-      className="shadow-lg w-56 rounded-sm overflow-hidden bg-white"
+      className="shadow-lg w-56 rounded-sm overflow-hidden bg-white cursor-pointer"
     >
       <div
-        className={`p-4 text-center font-bold text-gray-900 shadow-sm bg-${color} text-lg bg-opacity-90`}
+        className={`p-4 text-center font-bold text-gray-800 shadow-sm bg-${color} text-lg bg-opacity-90`}
       >
         {title}
       </div>
