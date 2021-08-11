@@ -3,7 +3,7 @@ import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between bg-white max-w-6xl mx-auto">
+    <nav className="flex justify-between bg-white max-w-6xl mx-auto relative z-20">
       <Link href="/">
         <div className="text-2xl cursor-pointer leading-tight text-center font-mont">
           <span className="text-blue-primary font-black ">LEARN</span>

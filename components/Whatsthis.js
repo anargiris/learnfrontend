@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 const Whatsthis = () => {
   return (
-    <section id="whatsthis" className="font-mont border-t-4 border-blue-strong">
+    <section
+      id="whatsthis"
+      className="font-mont border-t-4 border-blue-strong mb-40"
+    >
       <h3 className="text-4xl text-white uppercase bg-blue-primary py-5 text-center font-bold">
         Become a frontend developer
       </h3>

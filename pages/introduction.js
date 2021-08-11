@@ -13,7 +13,6 @@ const introduction = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <Navbar />
       <main className="text-blue-strong font-open">
         <h1 className="text-5xl font-bold font-mont text-center uppercase leading-relaxed mb-5">
           <span className="text-blue-primary font-black ">Learn</span>
@@ -61,7 +60,6 @@ const introduction = () => {
           <h4 className="text-4xl mb-10 font-bold font-mont">
             Start with HTML
           </h4>
-          <p>Begin your journey with HTML!</p>
           <Link href="/html">
             <motion.div
               whileHover={{
