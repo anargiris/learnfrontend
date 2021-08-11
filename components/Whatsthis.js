@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Whatsthis = () => {
@@ -55,15 +55,17 @@ const Whatsthis = () => {
               Follow a path that's led many to success.
             </p>
             <div className="flex justify-center items-center">
-              <motion.button
-                whileHover={{
-                  scale: 1.1,
-                }}
-                className="bg-yellow-secondary shadow-lg text-white p-5
+              <Link href="/introduction">
+                <motion.button
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  className="bg-yellow-secondary shadow-lg text-white p-5
            rounded-lg"
-              >
-                Start now
-              </motion.button>
+                >
+                  Start now
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>

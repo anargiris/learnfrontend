@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const EinsteinQuote = () => {
   return (
-    <article className={styles.wrapper}>
+    <article className={`${styles.wrapper} shadow-sm`}>
       <figure
         className={`${styles.figura} rounded-full overflow-hidden relative`}
       >
