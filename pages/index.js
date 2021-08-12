@@ -12,8 +12,11 @@ export default function Home() {
     >
       <Hero />
       <Whatsthis />
-      <section className="h-screen">
-        <Accordion />
+      <section className="h-screen flex flex-col items-center">
+        <Accordion
+          question="What will I get from this website?"
+          answer="You will understand what it takes to become a frontend developer as well as having a clear idea of what steps to follow to make it."
+        />
         <Accordion />
         <Accordion />
       </section>

@@ -11,7 +11,7 @@ const Whatsthis = () => {
       <h3 className="text-4xl text-white uppercase bg-blue-primary py-5 text-center font-bold">
         Become a frontend developer
       </h3>
-      <div className="flex justify-between">
+      <div className="flex md:flex-row flex-col justify-between">
         <div className="p-10 flex-1 relative">
           <div className="text-blue-strong font-open shadow-lg border-l border-t border-r border-blue-strong border-opacity-10 rounded-sm p-5 relative bg-white">
             <span

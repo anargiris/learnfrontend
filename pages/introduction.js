@@ -56,9 +56,9 @@ const introduction = () => {
             </div>
           </div>
         </section>
-        <section className="mt-20 text-center border-t-4 py-10 border-blue-strong">
+        <section className="mt-20 text-center border-t-2 py-10 border-blue-secondary">
           <h4 className="text-4xl mb-10 font-bold font-mont">
-            Start with HTML
+            Start with <span className="text-yellow-primary">HTML</span>
           </h4>
           <Link href="/html">
             <motion.div
