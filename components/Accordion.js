@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const Accordion = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="w-1/3 mb-4">
+    <motion.div layout className="w-1/3 mb-4">
       <AnimatePresence>
         <motion.div
           key="question"
+          layout
           className="rounded-tr-md relative z-20  rounded-br-md shadow-sm px-1 py-2 bg-indigo-100 cursor-pointer font-open"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -16,12 +17,14 @@ const Accordion = ({ question, answer }) => {
 
         {isOpen && (
           <motion.div
+            layout
             key="answer"
-            initial={{ y: -10 }}
+            initial={{ y: -10, opacity: 0 }}
             animate={{
               y: 0,
+              opacity: 1,
               transition: {
-                duration: 0.4,
+                duration: 0.5,
               },
             }}
             exit={{ y: -10, opacity: 0 }}
@@ -31,7 +34,7 @@ const Accordion = ({ question, answer }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 };
 
