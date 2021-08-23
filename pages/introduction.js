@@ -56,7 +56,7 @@ const introduction = () => {
             </div>
           </div>
         </section>
-        <section className="mt-20 text-center border-t-2 py-10 border-blue-secondary">
+        <section className="mt-20 text-center py-10 bg-gradient-to-t from-linear-start to-linear-end">
           <h4 className="text-4xl mb-10 font-bold font-mont">
             Start with <span className="text-yellow-primary">HTML</span>
           </h4>

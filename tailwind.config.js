@@ -17,6 +17,10 @@ module.exports = {
           secondary: "#FFB703",
           primary: "#FB8500",
         },
+        linear: {
+          start: "#E3FFFD",
+          end: "#FFEDFB",
+        },
       },
     },
   },

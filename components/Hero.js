@@ -24,7 +24,7 @@ const Hero = () => {
         <Link href="/introduction">
           <motion.button
             whileHover={{ y: -5, transition: "spring" }}
-            className="p-2 text-xl rounded-md bg-yellow-primary shadow-md"
+            className="p-2 text-xl text-white rounded-md bg-yellow-primary shadow-md"
           >
             Get started
           </motion.button>

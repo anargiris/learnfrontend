@@ -9,25 +9,26 @@ const Accordion = ({ question, answer }) => {
         <motion.div
           key="question"
           layout
-          className="rounded-tr-md relative z-20  rounded-br-md shadow-sm px-1 py-2 bg-indigo-100 cursor-pointer font-open"
+          className="rounded-tr-md relative z-20  rounded-br-md shadow-sm px-1 py-2 bg-blue-secondary bg-opacity-40 cursor-pointer font-open border-l-2 border-yellow-secondary"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <motion.div className="text-gray-900">{question}</motion.div>
+          <motion.div className="text-gray-800 font-mont font-bold ml-1">
+            {question}
+          </motion.div>
         </motion.div>
 
         {isOpen && (
           <motion.div
             layout
             key="answer"
-            initial={{ y: -10, opacity: 0 }}
+            initial={{ opacity: 0 }}
             animate={{
-              y: 0,
               opacity: 1,
               transition: {
                 duration: 0.5,
               },
             }}
-            exit={{ y: -10, opacity: 0 }}
+            exit={{ opacity: 0 }}
             className="p-2 font-open text-lg text-gray-700 border-l border-b border-gray-300"
           >
             {answer}
